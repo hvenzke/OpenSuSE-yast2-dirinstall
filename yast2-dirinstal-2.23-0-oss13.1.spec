@@ -21,10 +21,12 @@
 
 Name:           yast2-dirinstall
 Version:        2.23.0
-Release:        1_oss13.1
+Release:        2_oss13.1
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0:        yast2-dirinstall-%{version}.tar.bz2
+
+Patch:          yast2-dirinstal.remove-Mouse.patch
 
 # Installation::dirinstall_target
 # Wizard::SetDesktopTitleAndIcon
@@ -111,7 +113,9 @@ rm -rf "$RPM_BUILD_ROOT"
 %doc %{_prefix}/share/doc/packages/yast2-dirinstall
 
 %changelog
+* Sun Apr 20  2014 support@remsnet.de -r2
+- added patch yast2-dirinstal.remove-Mouse.patch  to remove Mouse requirement.
 
-* Sun Apr 20  2014 support@remsnet.de
+* Sun Apr 20  2014 support@remsnet.de -r1
 - rebuild pkg on opensuse 13.1
 - removed require mouse ( who needs an Mouse on TEXT CONSOLE ... )

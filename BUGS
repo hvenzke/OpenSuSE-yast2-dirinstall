@@ -1,4 +1,4 @@
-Known Bugs , bo be investigated 
+Known Bugs , to be investigated 
 
 - Calling the YaST module `inst_dirinstall_finish has failed.                    │                    │
    └────────────────────│ More information can be found near the end of the '/var/log/YaST2/y2log' file.

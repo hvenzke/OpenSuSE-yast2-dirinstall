@@ -31,7 +31,14 @@ Known Bugs , bo be investigated
 2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YCancelButton for YPushButton "Quit" at 0x7f1dec6beac0 from function key F9
 2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YOKButton for YPushButton "Next" at 0x7f1dec573760 from function key F10
 
+bastard-xen4.4 $:/usr/src/packages/BUILD/yast2-dirinstall-2.23.0/src # grep -i mouse */*
+clients/inst_dirinstall_finish.ycp:    import "Mouse";
+clients/inst_dirinstall_finish.ycp:    Mouse::Save();
+
+
 
 it wants  the yast2-mouse module :-)
  .. who needs an mouse while use XEN 4.x Opensuse and TEXT consoles ? -- no one .
+ 
+BugFIX :  patch to remove the depend mouse :-)
 

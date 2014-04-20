@@ -63,6 +63,7 @@ directory.
 
 %prep
 %setup -n %{name}-%{version}
+%patch -p0 -F 10
 %build
 
 autoreconf -fiv

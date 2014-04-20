@@ -1,5 +1,37 @@
-
 Known Bugs , bo be investigated 
 
 - Calling the YaST module `inst_dirinstall_finish has failed.                    │                    │
    └────────────────────│ More information can be found near the end of the '/var/log/YaST2/y2log' file.
+   
+   
+   reason :
+   
+   
+014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:286 tty:
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Misc.rb:197 .sysconfig.keyboard.YAST_KEYBOARD: 'german,pc105'
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:616 current_kbd german model pc105
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:514 Setting keyboard to: <german>
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:330 keyboard model used: pc105
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:525 Description for keyboard <german>: <[]>
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Keyboard.rb:627 Restored data (sysconfig) for keyboard: <german>
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Misc.rb:197 .sysconfig.clock.TIMEZONE: 'Europe/Berlin'
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Misc.rb:197 .sysconfig.clock.DEFAULT_TIMEZONE: 'US/Eastern'
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Timezone.rb:391 content of /etc/adjtime: ["0.0 0 0.0", "0", "UTC"]
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/Console.rb:211 encoding ISO-8859-1
+2014-04-20 14:55:54 <3> ex40(10993) [Parser] clients/inst_dirinstall_finish.ycp:88 Unknown namespace 'Mouse'. Missing 'import'?
+2014-04-20 14:55:54 <3> ex40(10993) [Parser] clients/inst_dirinstall_finish.ycp:88 syntax error, unexpected SCANNER_ERROR
+2014-04-20 14:55:54 <1> ex40(10993) [wfm] Y2CCWFM.cc(createInLevel):148 Parsing finished
+2014-04-20 14:55:54 <1> ex40(10993) [Interpreter] clients/inst_dirinstall_finish.ycp:87 Calling YaST client inst_dirinstall_finish
+2014-04-20 14:55:54 <5> ex40(10993) [liby2] Y2Component.cc(doActualWork):67 component ErrorComponent: stub function Y2Component::doActualWork() called
+2014-04-20 14:55:54 <1> ex40(10993) [Interpreter] clients/inst_dirinstall_finish.ycp:87 Called YaST client returned.
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/ProductControl.rb:1515 Calling `inst_dirinstall_finish ($["enable_back":true, "enable_next":true]) returned nil
+2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YOKButton for YPushButton "Next" at 0x7f1dec1b0cb0 from function key F10
+2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YCancelButton for YPushButton "Abort" at 0x7f1dec6ca640 from function key F9
+2014-04-20 14:55:54 <1> ex40(10993) [Ruby] modules/ProductControl.rb:1543 Not running hooks at the end of the installation
+2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YCancelButton for YPushButton "Quit" at 0x7f1dec6beac0 from function key F9
+2014-04-20 14:55:54 <1> ex40(10993) [ui] YPushButton.cc(setFunctionKey):188 Guessing button role YOKButton for YPushButton "Next" at 0x7f1dec573760 from function key F10
+
+
+it wants  the yast2-mouse module :-)
+ .. who needs an mouse while use XEN 4.x open Opensuse and TEXT consoles ? -- no one .
+

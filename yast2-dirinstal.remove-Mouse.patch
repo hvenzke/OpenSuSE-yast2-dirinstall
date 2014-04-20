@@ -1,5 +1,5 @@
---- inst_dirinstall_finish.ycp.orig     2013-01-22 11:17:27.000000000 +0100
-+++ inst_dirinstall_finish.ycp  2014-04-20 15:54:41.529209645 +0200
+--- src/clients/inst_dirinstall_finish.ycp.orig 2013-01-22 11:17:27.000000000 +0100
++++ src/clients/inst_dirinstall_finish.ycp      2014-04-20 16:17:14.515940426 +0200
 @@ -17,7 +17,6 @@
      import "Installation";
      import "Directory";

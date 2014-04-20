@@ -68,7 +68,7 @@ autoreconf -fiv
 export CFLAGS="$CFLAGS -I%{_libdir}"
 export CXXFLAGS="$CFLAGS -I%{_libdir}"
 export CFLAGS="$CFLAGS -fpic -DPIC"
-export LIBS="-pie -lcdb"
+export LIBS="-pie "
 %configure \
         --prefix=%{_prefix} \
         --exec-prefix=%{_sbindir} \

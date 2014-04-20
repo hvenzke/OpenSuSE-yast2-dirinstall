@@ -42,3 +42,53 @@ it wants  the yast2-mouse module :-)
  
 BugFIX :  patch to remove the depend mouse :-)
 
+-----------------------------------------------------------------------------------------------------------
+ex40:~ # yast dirinstall
+        /usr/lib64/libcurl.so.4.3.0
+                                   7f2c0288b000-7f2c0288c000 rw-p 0006a000 09:02 50336726                   /usr/lib64/libcurl.so.4.3.0
+           7f2c0288c000-7f2c02a59000 r-xp 00000000 09:02 50336647                   /usr/lib64/librpm.so.3.2.0
+                                                                                                              7f2c02a59000-7f2c02c58000 ---p 001cd000 09:02 50336647                   /usr/lib64/librpm.so.3.2.0
+                                                                                     7f2c02c58000-7f2c02c5d000 r--p 001cc000 09:02 50336647                   /usr/lib64/librpm.so.3.2.0
+                                                            7f2c02c5d000-7f2c02c60000 rw-p 001d1000 09:02 50336647                   /usr/lib64/librpm.so.3.2.0
+                                   7f2c02c60000-7f2c030d9000 r-xp 00000000 09:02 50336220                   /usr/lib64/libzypp.so.1306.3.0
+              7f2c030d9000-7f2c032d9000 ---p 00479000 09:02 50336220                   /usr/lib64/libzypp.so.1306.3.0
+                                                                                                                     7f2c032d9000-7f2c032e7000 r--p 00479000 09:02 50336220                   /usr/lib64/libzypp.so.1306.3.0
+                                                                                                7f2c032e7000-7f2c032f1000 rw-p 00487000 09:02 50336220                   /usr/lib64/libzypp.so.1306.3.0
+                                                                           7f2c032f1000-7f2c032f5000 rw-p 00000000 00:00 0
+                                                                                                                           7f2c032f5000-7f2c03497000 r-xp 00000000 09:02 16783246                   /usr/lib64/YaST2/plugin/libpy2Pkg.so.2.0.0
+                                                                                                                  7f2c03497000-7f2c03696000 ---p 001a2000 09:02 16783246                   /usr/lib64/YaST2/plugin/libpy2Pkg.so.2.0.0
+                                                                                                         7f2c03696000-7f2c0369a000 r--p 001a1000 09:02 16783246                   /usr/lib64/YaST2/plugin/libpy2Pkg.so.2.0.0
+                                                                                                7f2c0369a000-7f2c036a1000 rw-p 001a5000 09:02 16783246                   /usr/lib64/YaST2/plugin/libpy2Pkg.so.2.0.0
+                                                                                       7f2c036a1000-7f2c036a2000 rw-p 00000000 00:00 0
+           7f2c036a2000-7f2c036be000 r-xp 00000000 09:02 16783349                   /usr/lib/perl5/vendor_perl/5.18.1/x86_64-linux-thread-multi/auto/YaST/YCP/libYCP.so.2.0.0
+                                                 7f2c036be000-7f2c038be000 ---p 0001c000 09:02 16783349                   /usr/lib/perl5/vendor_perl/5.18.1/x86_64-linux-thread-multi/auto/YaST/YCP/libYCP.so.2.0.0
+                                                                                       7f2c038be000-7f2c038bf000 r--p 0001c000 09:02 16783349                   /usr/lib/perl5/vendor_perl/5.18.1/x86_64-linux-thread-multi/auto/YaST/YCP/libYCP.so.2.0.0
+ 7f2c038bf000-7f2c038c0000 rw-p 0001d000 09:02 16783349                   /usr/lib/perl5/vendor_perl/5.18.1/x86_64-linux-thread-multi/auto/YaST/YCP/libYCP.so.2.0.0
+                                       7f2c038c0000-7f2c038c3000 r-xp 00000000 09:02 16781614                   /usr/lib64/ruby/2.0.0/x86_64-linux/digest.so
+                                7f2c038c3000-7f2c03ac2000 ---p 00003000 09:02 16781614                   /usr/lib64/ruby/2.0.0/x86_64-linux/d/sbin/yast: line 375:  5054 Aborted                 $ybindir/y2base $module "$@" "$SELECTED_GUI" $Y2_GEOMETRY $Y2UI_ARGS
+             ex40:~ #
+             
+   
+reason :
+             
+ex40:~ # ls /usr/lib64/ruby/2.0.0/x86_64-linux/
+bigdecimal.so    date_core.so  dl      fcntl.so   io      objspace.so  pty.so       ripper.so    strscan.so
+continuation.so  dbm.so        dl.so   fiber.so   json    openssl.so   racc         sdbm.so      syslog.so
+coverage.so      digest        enc     fiddle.so  mathn   pathname.so  rbconfig.rb  socket.so    zlib.so
+curses.so        digest.so     etc.so  gdbm.so    nkf.so  psych.so     readline.so  stringio.so
+ex40:~ # 
+    
+ex40:~ # ls /usr/lib64/ruby/2.0.0/x86_64-linux/d/sbin/yast
+ls: cannot access /usr/lib64/ruby/2.0.0/x86_64-linux/d/sbin/yast: No such file or directory
+
+
+Solution : none yet , maybe some know it better .-)
+
+             
+             --------------------------------------------------------------------------------------
+             
+             
+
+
+
+

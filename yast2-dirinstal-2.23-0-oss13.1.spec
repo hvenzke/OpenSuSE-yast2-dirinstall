@@ -111,3 +111,7 @@ rm -rf "$RPM_BUILD_ROOT"
 %doc %{_prefix}/share/doc/packages/yast2-dirinstall
 
 %changelog
+
+* Sun Apr 20  2014 support@remsnet.de
+- rebuild pkg on opensuse 13.1
+- removed require mouse ( who needs an Mouse on TEXT CONSOLE ... )

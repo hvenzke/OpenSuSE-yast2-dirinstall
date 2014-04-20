@@ -1,4 +1,3 @@
-
 # spec file for package yast2-dirinstall
 #
 # Copyright (c) 2013 SUSE LINUX Products GmbH, Nuernberg, Germany.
@@ -36,7 +35,6 @@ Requires:       yast2-packager >= 2.16.3
 Requires:       autoyast2-installation
 Requires:       yast2
 Requires:       yast2-country
-Requires:       yast2-mouse
 Requires:       yast2-runlevel
 
 BuildRequires:  perl-XML-Writer
